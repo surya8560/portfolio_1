@@ -486,7 +486,7 @@ footer>p{
     padding: 20px;
   }
 .projects > .project>img{
-    height: 150px;
+    height: 120px;
 }
   .experience {
     flex-direction: column;
@@ -545,3 +545,4 @@ footer>p{
     right: 15px;
 }
 }
+
