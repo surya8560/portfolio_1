@@ -2,9 +2,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-html{
+html,body{
     scroll-behavior: smooth;
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 nav{
     height: 10vh;
@@ -24,6 +34,9 @@ nav>button{
 nav>button>img{
     height: 60px;
 }
+nav>#menu{
+    display: none;
+}
 nav>ul{
     display: flex;
     gap: 30px;
@@ -33,6 +46,8 @@ nav>ul{
 nav>ul>li>a{
     text-decoration: none;
     color: black;
+    text-shadow: 0px 0px 2px white;
+    font-weight: bold;
     font-size: 17px;
 }
 main{
@@ -213,17 +228,26 @@ section{
 }
 .left>.exp>img{
     height: 120px;
+    padding: 10px;
+}
+.right>.exp2>img{
+    height: 120px;
+    padding: 10px;
 }
 .left>.exp>.info{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
     gap: 10px;
 }
 .right>.exp2>.info{
     display: flex;
     flex-direction: column;
-   align-items: center;
+  justify-content: center;
+    align-items: center;
+    padding: 20px;
    gap: 10px;
 }
 .right>.exp2:hover{
@@ -275,6 +299,10 @@ footer>p{
 
   nav > ul {
     display: none;
+    
+  }
+  nav>#menu{
+    display: flex;
   }
 
   nav > button > img {
@@ -332,6 +360,134 @@ footer>p{
     padding: 20px;
   }
 
+  .experience {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .experience > .left,.experience > .right{
+    flex-basis: 100%;
+    width: 80%;
+    height: auto;
+    border-right: none;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .experience>.left>.exp{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+   .experience>.right>.exp2{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .right>.exp2:nth-child(odd){
+    display: none;
+}
+.left>.exp.exp:nth-child(even){
+    display: none;
+}
+  
+  footer {
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  footer > form {
+    width: 50%;
+
+  }
+  .left>.exp>.info{
+    justify-content: center;
+    padding: 10px;
+}
+    .right>.exp2>.info{
+        padding: 10px;
+    }
+.up>a>img{
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+}
+}
+@media (max-width: 340px){
+    nav {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav > ul {
+    display: none;
+    
+  }
+  nav>#menu{
+    display: flex;
+  }
+
+  nav > button > img {
+    height: 40px;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  main > .left,
+  main > .right {
+    flex-basis: 100%;
+  }
+
+  .right > h1 {
+    font-size: 36px;
+  }
+
+  .right > p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .right > ul {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  section {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .skills > marquee > img {
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .projects {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 50px;
+  }
+
+  .projects > .project {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+  }
+.projects > .project>img{
+    height: 150px;
+}
   .experience {
     flex-direction: column;
     align-items: center;
